@@ -26,9 +26,7 @@
 <meta name="author" content="Start Bootstrap">
 <meta name="google-site-verification" content="37Tru9bxB3NrqXCt6JT5Vx8wz2AJQ0G4TkC-j8WL3kw">
 
-<title>
-    Shop Homepage - Template Preview - Start Bootstrap
-  </title>
+<title> shopme </title>
 
 <meta name="description" content="">
 
@@ -39,6 +37,15 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
 
 <link rel="stylesheet" href="${css}/style-template.css">
+
+<!-- Bootstrap core CSS -->
+
+<link rel="stylesheet" href="${css}/bootstrap.min.css">
+
+<!-- Custom styles for this template -->
+
+<link rel="stylesheet" href="${css}/shopme-homepage.css">
+
 
 <link type="application/atom+xml" rel="alternate" href="http://startbootstrap.com/feed.xml" title="startbootstrap" />
 <script type="7a28d88736ca3ada5306e3b6-text/javascript">
@@ -98,50 +105,21 @@
 
 </head>
 <body class="preview-page">
-<div class="preview-bar bg-white fixed-top py-2 border-bottom-primary">
-<div class="container-fluid h-100">
-<div class="row align-items-center justify-content-between h-100">
-<div class="col-auto col-lg">
-<i class="fab fa-github text-github small"></i>
-<a class="small" href="https://github.com/StartBootstrap/startbootstrap-shop-homepage">View on GitHub</a>
-</div>
-<div class="col col-auto d-none d-xl-block">
-<ul class="nav responsive-toggler justify-content-center" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" id="desktopToggle" data-toggle="tab" href="#" role="tab" aria-selected="true">
-<i class="fal fa-desktop"></i>
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="mobileToggle" data-toggle="tab" href="#" role="tab" aria-selected="false">
-<i class="fal fa-mobile"></i>
-</a>
-</li>
-</ul>
-</div>
-<div class="col text-right">
-<a href="https://github.com/StartBootstrap/startbootstrap-shop-homepage/archive/gh-pages.zip" class="btn btn-primary btn-sm mr-2" onclick="if (!window.__cfRLUnblockHandlers) return false; ga('send','event','Download','click','Shop Homepage')" data-cf-modified-7a28d88736ca3ada5306e3b6-="">Free Download</a>
-<a href="http://startbootstrap.github.io/startbootstrap-shop-homepage/" class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fal fa-times mr-1"></i> Remove Frame</a>
-</div>
-</div>
-</div>
-</div>
-<iframe class="iframe-preview" width="100%" src="http://startbootstrap.github.io/startbootstrap-shop-homepage/"></iframe>
-<script id="dsq-count-scr" src="//startbootstrap.disqus.com/count.js" async type="7a28d88736ca3ada5306e3b6-text/javascript"></script>
+
+<!-- Navigation -->
+
+<%@include file= "./shared/navbar.jsp" %>
+
+<%@include file= "home.jsp" %>
+
+<!--  Footer  -->
+<%@include file= "./shared/footer.jsp" %>
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" type="7a28d88736ca3ada5306e3b6-text/javascript"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous" type="7a28d88736ca3ada5306e3b6-text/javascript"></script>
 <script type="7a28d88736ca3ada5306e3b6-text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 <script type="7a28d88736ca3ada5306e3b6-text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 <script src="${js}/scripts.js" type	="7a28d88736ca3ada5306e3b6-text/javascript"></script>
-<script type="7a28d88736ca3ada5306e3b6-text/javascript">
-        $("#desktopToggle").on('click', function(e) {
-            e.preventDefault();
-            $(".iframe-preview").removeClass("iframe-preview-mobile");
-        });
-        $("#mobileToggle").on('click', function(e) {
-            e.preventDefault();
-            $(".iframe-preview").addClass("iframe-preview-mobile");
-        });
-    </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7a28d88736ca3ada5306e3b6-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7a28d88736ca3ada5306e3b6-|49" defer=""></script>
+</body>
 </html>
