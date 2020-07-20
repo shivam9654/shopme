@@ -26,7 +26,7 @@
 <meta name="author" content="Start Bootstrap">
 <meta name="google-site-verification" content="37Tru9bxB3NrqXCt6JT5Vx8wz2AJQ0G4TkC-j8WL3kw">
 
-<title> shopme </title>
+<title> shopme-  ${title}  </title>
 
 <meta name="description" content="">
 
@@ -110,7 +110,23 @@
 
 <%@include file= "./shared/navbar.jsp" %>
 
-<%@include file= "home.jsp" %>
+<!-- Page Content -->
+<!-- Loads only home content -->
+<c:if test="${userClickHome== true}">
+	<%@include file= "home.jsp" %>
+</c:if>
+
+<!-- User clicks about -->
+<c:if test="${userClickAbout== true}">
+	<%@include file= "about.jsp" %>
+</c:if>
+
+<!-- User clicks contact -->
+ 
+<c:if test="${userClickContact== true}">
+	<%@include file= "contact.jsp" %>
+</c:if>
+
 
 <!--  Footer  -->
 <%@include file= "./shared/footer.jsp" %>
