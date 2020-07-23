@@ -3,9 +3,38 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
+ 
 
-/*
-body {
-  padding-top: 6px;
+html, body {
+	
+	height:100%; /* just to get the height of view port */
 }
-*/
+
+
+.wrapper {
+	
+	position: relative;  /* Position relative means (0,0) all the children positions */
+						/*  will be measured relative to this class, id or tag */
+	min-height:100%;    /* If the content is smaller than the minimum height, the minimum height will be applied. */
+						/* If the content is larger than the minimum height, the min-height property has no effec*/
+						/* this property makes sure that minimum height is always 100% of html, body height */
+}
+
+.content {
+	
+	padding-bottom:70px; /* without applying this property footer is situated at the bottom and also content so by 
+						 increasing the view port(browser window) we increase the difference between footer and content 
+						 because they overlap to each other*/ 
+	
+}
+
+.footer
+{
+	position: absolute;  /* fixed position with respect to .wrapper at the bottom */
+	height:70px;
+	width:100%;
+	bottom:0;	
+}
+
+
+

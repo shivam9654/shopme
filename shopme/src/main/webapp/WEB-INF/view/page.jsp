@@ -28,6 +28,10 @@
 
 <title> shopme-  ${title}  </title>
 
+<script>
+	window.menu = '${title}'
+</script>
+
 <meta name="description" content="">
 
 <link rel="canonical" href="http://startbootstrap.com/previews/shop-homepage/">
@@ -106,36 +110,46 @@
 </head>
 <body class="preview-page">
 
-<!-- Navigation -->
+	<div class="wrapper">
+		<!-- Navigation -->
 
-<%@include file= "./shared/navbar.jsp" %>
+		<%@include file="./shared/navbar.jsp"%>
 
-<!-- Page Content -->
-<!-- Loads only home content -->
-<c:if test="${userClickHome== true}">
-	<%@include file= "home.jsp" %>
-</c:if>
+		<div class="content">
+			<!-- Page Content -->
+			<!-- Loads only home content -->
+			<c:if test="${userClickHome== true}">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-<!-- User clicks about -->
-<c:if test="${userClickAbout== true}">
-	<%@include file= "about.jsp" %>
-</c:if>
+			<!-- User clicks about -->
+			<c:if test="${userClickAbout== true}">
+				<%@include file="about.jsp"%>
+			</c:if>
 
-<!-- User clicks contact -->
- 
-<c:if test="${userClickContact== true}">
-	<%@include file= "contact.jsp" %>
-</c:if>
+			<!-- User clicks contact -->
+
+			<c:if test="${userClickContact== true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+
+		</div>
 
 
-<!--  Footer  -->
-<%@include file= "./shared/footer.jsp" %>
+		<!--  Footer  -->
+		<%@include file="./shared/footer.jsp"%>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" type="7a28d88736ca3ada5306e3b6-text/javascript"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous" type="7a28d88736ca3ada5306e3b6-text/javascript"></script>
-<script type="7a28d88736ca3ada5306e3b6-text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-<script type="7a28d88736ca3ada5306e3b6-text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-<script src="${js}/scripts.js" type	="7a28d88736ca3ada5306e3b6-text/javascript"></script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7a28d88736ca3ada5306e3b6-|49" defer=""></script>
+		<!--  Jquery -->
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.map"></script>
+
+		<!--  My Scripts -->
+		<script src="${js}/myapp.js"></script>
+	</div>
 </body>
 </html>
