@@ -24,3 +24,6 @@ hs_err_pid*
 
 /shopme/target/
 /shopmebackend/target/
+/.metadata/
+/Servers/
+/shopme/.metadata/
