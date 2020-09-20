@@ -29,7 +29,7 @@ public class CategoryTest {
 		
 		
 	}
-	
+	/*
 	@Test
 	public void testAddCategory()
 	{
@@ -41,5 +41,54 @@ public class CategoryTest {
 		assertEquals("Successfully saved...",true,categoryDAO.addCategory(cat));
 		
 	}
+	
+	*/
+	/*
+	@Test
+	public void testgetCategory()
+	{
+		Category cat= categoryDAO.getCategoryById(3);
+		
+		assertEquals("Category succesfully retrived",cat.getName(),"Mobile");
+		
+	}
+	
+	*/
+	
+	
+	/*
+
+	@Test
+	public void testupdateCategory()
+	{
+		Category cat= categoryDAO.getCategoryById(3);
+		
+		cat.setName("Mobile");
+		
+		categoryDAO.updateCategory(cat);
+		
+		cat= categoryDAO.getCategoryById(3);
+		
+		
+		assertEquals("Category succesfully updated",cat.getName(),"Mobile");
+		
+	}
+	
+	*/
+	
+	/*
+	
+	@Test
+	public void testgetCategories()
+	{
+	
+		
+		assertEquals("Successfully retived all the categories ",3,categoryDAO.getCategories().size());
+	}
+	
+	*/
+	
+	
+	
 	
 }

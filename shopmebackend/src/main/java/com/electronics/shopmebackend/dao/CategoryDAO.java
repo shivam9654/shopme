@@ -6,10 +6,14 @@ import com.electronics.shopmebackend.dto.Category;
 
 public interface CategoryDAO {
 	
-	boolean addCategory(Category cat);
+	Category getCategoryById(int id);
 	
 	List<Category> getCategories();
 	
-	Category getCategoryById(int id);
+	boolean addCategory(Category cat);	
+	
+	boolean updateCategory(Category cat);	
+	
+	boolean deleteCategory(Category cat);
 
 }

@@ -12,7 +12,7 @@
 	
 	<ctx:component-scan base-package="com.electronics.shopme.controller"></ctx:component-scan>	
 	
-	<ctx:component-scan base-package="com.electronics.shopmebackend.daoimpl"></ctx:component-scan>
+	<ctx:component-scan base-package="com.electronics.shopmebackend"></ctx:component-scan>
 	
 	
 		<!-- Step 5: Define Spring MVC view resolver -->
