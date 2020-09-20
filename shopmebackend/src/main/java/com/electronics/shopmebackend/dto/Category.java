@@ -1,12 +1,27 @@
 package com.electronics.shopmebackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
+@SequenceGenerator(name="seq",sequenceName="CATEGORY_SEQ", initialValue=1, allocationSize=1)     
 public class Category {
 	
+    @Id   
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")               
 	private int id;
 	private String name;
-	private String desctiption;
+	private String description;
+	
+	@Column(name= "image_url")
 	private String imageURL;
-	private boolean setActive= true;
+	
+	@Column(name= "is_active")	
+	private char setActive= '1';
 	
 	public int getId() {
 		return id;
@@ -20,18 +35,30 @@ public class Category {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesctiption() {
-		return desctiption;
+	public String getDescription() {
+		return description;
 	}
-	public void setDesctiption(String desctiption) {
-		this.desctiption = desctiption;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public String getImageURL() {
 		return imageURL;
 	}
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
-	}	
+	}
+	public char getSetActive() {
+		return setActive;
+	}
+	public void setSetActive(char setActive) {
+		this.setActive = setActive;
+	}
+	
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageURL
+				+ ", setActive=" + setActive + "]";
+	}
 	
 
 }
