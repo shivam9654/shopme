@@ -58,12 +58,14 @@
 					
 					
 						<thead>
-						
+							
 							<tr>
+							    <th></th>
 								<th>Name</th>
 								<th>Brand</th>
 								<th>Price</th>
-								<th>Qty. Available</th>							
+								<th>Qty. Available</th>		
+								<th> </th>					
 							</tr>
 						
 						</thead>
