@@ -18,4 +18,57 @@ $(function() {
 		break;
 	}
 	
+	
+	// code for jquery datatable
+	
+	var $table= $('#productListTable');
+	
+	
+	if($table.length) {
+		
+		var jsonUrl = '';
+		if (window.categoryId == '') {
+			jsonUrl = window.contextRoot + '/json/data/all/products';
+		} else {
+			jsonUrl = window.contextRoot + '/json/data/category/'
+					+ window.categoryId + '/products';
+		}
+		
+		
+		
+		$table.DataTable({
+			
+			lengthMenu: [[1,3,5,-1],['One Record','Three Record','Five Record','ALL']],
+			pageLength: 3,
+			ajax : {
+				url : jsonUrl,
+				dataSrc : ''
+			},
+			
+			columns: [
+				
+				{
+					data: 'name'
+				},
+				
+				{
+					data: 'brand'
+				},
+				
+				{
+					data: 'unitPrice'
+				},
+				
+				{
+					data: 'quantity'
+				}
+				
+				
+			]
+			
+		});
+		
+		
+	}
+	
 });

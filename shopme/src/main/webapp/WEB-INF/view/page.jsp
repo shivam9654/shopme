@@ -29,7 +29,8 @@
 <title> shopme-  ${title}  </title>
 
 <script>
-	window.menu = '${title}'
+	window.menu = '${title}';
+	window.contextRoot= '${contextRoot}'
 </script>
 
 <meta name="description" content="">
@@ -49,6 +50,8 @@
 <!-- Custom styles for this template -->
 
 <link rel="stylesheet" href="${css}/shopme-homepage.css">
+
+<link rel="stylesheet" href="${css}/dataTables.bootstrap4.css">
 
 
 <link type="application/atom+xml" rel="alternate" href="http://startbootstrap.com/feed.xml" title="startbootstrap" />
@@ -151,9 +154,17 @@
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.map"></script>
+		
+		<!--  DataTable Plugin -->
+		
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		
+		<script src="${js}/dataTables.bootstrap4.js"></script>
 
 		<!--  My Scripts -->
 		<script src="${js}/myapp.js"></script>
+		
 	</div>
 </body>
 </html>
